@@ -1,0 +1,181 @@
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px;
+        min-height: 100vh;
+      }
+      
+      .header {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        background-color: #d7cedb;
+      }
+      
+      .header__title,
+      .main__title{
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size:200%;
+      }
+      
+      .header__title {
+        padding-bottom: 20px;
+      }
+      
+      .nav__list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 5px;
+        list-style-type: none;
+      }
+      
+      .button {
+        font-size: 20px;
+        color: white;
+        border: none;
+        background-color: #78f092;
+        padding: 10px 15px;
+        border-radius: 22px;
+        transition: transform .2s;
+        margin: 0 auto;
+      }
+
+      .button:hover {
+        -ms-transform: scale(1.2); 
+        -webkit-transform: scale(1.2); 
+        transform: scale(1.2); 
+        background-color: red;
+        color: black;
+      }
+      
+      .main {
+        flex-grow: 1;
+        padding: 20px 0;
+        background-color: #d7cedb;
+      }
+      
+      .main__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px 20px 10px 20px;
+      }
+      
+      .item{ 
+        width: 200px;
+        height: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        background-color: #570b7a;
+        color: aliceblue;
+        font-size: 200%;
+	      transition: all 1s linear; 
+	      -webkit-transition: all 1s linear;
+	      -o-transition: all 1s linear;
+	      -moz-transition: all 1s linear;
+      }
+
+      .item:hover{ 
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg);
+        transition: all 1s linear;
+        -webkit-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+    }
+
+    @keyframes shareleft {
+      0%{
+        left: 0%;
+        background-color: #570b7a;
+      }
+      
+      20%{
+        left: 20%;
+        background-color: red;
+      }
+  
+      40%{
+        left: 40%;
+        background-color: blue;
+      }
+  
+      60%{
+        left: 60%;
+        background-color: yellow;
+      }
+  
+      80%{
+        left: 80%;
+        background-color: green;
+      }
+  
+      100%{
+        left: 100%;
+        background-color: purple;
+      }
+    }
+  
+    @keyframes share {
+      0%{
+        bottom: 100%;
+      }
+      
+      25%{
+          bottom: 10px;
+          width: 50px; 
+          height: 50px;}
+      
+      30%{
+          bottom: 0px; 
+          width: 50px; 
+          height: 25px;}
+  
+      35%{
+          bottom: 10px; 
+          width: 50px; 
+          height: 50px;}
+  
+      100%{
+          bottom: 100%;}
+    }
+    .region{
+      margin-top: 50px;
+      width: 100%;
+      height: 300px;
+      position: relative;
+    }
+  
+    .circle{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      background: purple;
+      animation: share 2s linear infinite, shareleft 10s linear infinite alternate;
+    }
+      
+      
+      
+      
